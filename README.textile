@@ -1,0 +1,23 @@
+h1. About
+
+things-redmine is a ruby script to attempt to sync Redmine with the Things.app desktop todo list manager. 
+
+h2. Usage
+
+* Clone the repo
+* Edit the api.rb and replace with your credentials. This will be yaml-ized soon. 
+* Turn on API access in Redmine under Administration -> Settings -> Authentication -> Enable REST web service
+* Back up your Things DB 
+<pre>cp ~/Library/Application Support/Cultured Code/Things/database.xml ~/Library/Application Support/Cultured Code/Things/database-backup.xml</pre>
+* Then run: 
+<pre> ruby init.rb</pre>
+
+h2. Required Gems
+
+* active_resource
+* appscript
+
+h2. Current State and Gotchas
+
+Right now it's very basic. This is just the beginning. This is by no means a complete project yet. I just got tired of waiting. The things todo class does not allow you to set the ID of the todo, so to ensure no duplicates are created the applescript uses a tag on the todo element based on the ID from redmine.
+
