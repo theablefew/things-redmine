@@ -8,9 +8,9 @@ h2. Usage
 * Edit the api.rb and replace with your credentials. This will be yaml-ized soon. 
 * Turn on API access in Redmine under Administration -> Settings -> Authentication -> Enable REST web service
 * Back up your Things DB 
-
+<pre>cp ~/Library/Application Support/Cultured Code/Things/database.xml ~/Library/Application Support/Cultured Code/Things/database-backup.xml</pre>
 * Then run: 
-
+<pre> ruby init.rb</pre>
 
 h2. Required Gems
 
