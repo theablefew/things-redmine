@@ -37,7 +37,7 @@ def pull_issues
       to_do = to_dos[0]
       to_do.name.set(rs.subject)
       unless rs.description.nil?
-        notes = rs.description+" http://issues.theablefew.com/#{rs.id}"
+        notes = rs.description+" #{Issue.site}#{rs.id}"
         to_do.notes.set(notes)
         
       end
@@ -52,7 +52,7 @@ def pull_issues
         }
       )
       unless rs.description.nil?
-        notes = rs.description+" http://issues.theablefew.com/#{rs.id}"
+        notes = rs.description+" #{Issue.site}#{rs.id}"
         to_do.notes.set(notes)
       end
       to_do.tag_names.set("issue-id-"+rs.id)
